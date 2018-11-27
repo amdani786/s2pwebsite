@@ -1,0 +1,694 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>S2P Edutech</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="color/default.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/s2plogo.png">
+    
+    <script src="js/jquery.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.nav.js"></script>
+	<script src="js/jquery.localScroll.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/isotope.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/inview.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="contactform/contactform.js"></script>
+    
+    <script src="json/somedata.json"></script>
+    <script type="text/javascript">
+    function getUrl(key){
+        for(var i in mydata)
+        {
+         
+            //console.log(Object.keys(url));
+            if(i.localeCompare(key) == 0){
+                console.log("matched");
+                return mydata[i].url;
+            }
+        }
+    };
+    
+   
+    
+   
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed again */
+    function openModal(key)
+    {
+        console.log(mydata);
+        url = getUrl(key);
+        var mysyllabus = getSyllabus(key);
+        console.log(url);
+        var mytitle = getTitle(key);
+        var videoFrame = '<iframe id="cartoonVideo" width="540" height="315" src="';
+            videoFrame += url;
+            videoFrame += '" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>';
+            console.log(videoFrame);
+        $("#modaltitle").html(mytitle);
+            $("#videoContainer").html(videoFrame);
+        $("#syllabus").html(mysyllabus);
+        $('#myModal').modal('show');
+    };
+        function getTitle(key)
+        {
+            for(var i in mydata)
+                {
+                    if(i.localeCompare(key) == 0)
+                        {
+                            return mydata[i].title;
+                        }
+                }
+        };
+       function getSyllabus(key){
+           var str = "<ul>"
+           for(var i in mydata){
+               
+                    if(i.localeCompare(key) == 0){
+                   // var topic = mydata[i].syllabus[j];
+                        console.log(mydata[i].syllabus);
+                        var s = "";
+                        for(var j in mydata[i].syllabus)
+                        {
+                            console.log(mydata[i].syllabus[j]);
+                            // for each topic, create html for subtopic
+                            s += "<li>";
+                            s += mydata[i].syllabus[j].topic;
+                            // for sublist
+                            var slist = '<ul style="padding-left:50px">';
+                            var slistarray = mydata[i].syllabus[j].subtopic;
+                            for(var k in slistarray)
+                            {
+                                slist += "<li>";
+                                slist += slistarray[k];
+                                slist += "</li>";
+                            }
+                            slist += "</ul>";
+                            s += slist;
+                            s += "</li>"
+                        }
+                        
+                        str += s;
+           
+           }
+           }
+           str += "</ul>"
+           
+           return str;
+       };
+         
+    </script>
+    <script type="text/javascript">
+       
+        
+$(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    
+   // var text = '{ "c":"https://www.youtube.com/embed/cn0-cSUeBiw", "java":"https://www.youtube.com/embed/cn0-cSUeBiw", "ionic":"https://www.youtube.com/embed/cn0-cSUeBiw"}';
+    var url = [];
+    console.log(Object.keys);
+    
+    
+    
+        
+
+
+//var url = JSON.parse(text);
+//console.log(url);
+    //var url = 'https://www.youtube.com/embed/RQaVzbxZqXY';
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    
+    
+    //getUrl("c");
+});
+</script>
+    
+	<style type="text/css">
+    .modal-content iframe{
+        margin: 0 auto;
+        display: block;
+    }
+</style>
+
+</head>
+
+<body>
+	<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div  class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+					<h1 class="brand"><a href="index.html">S2P Edutech</a></h1>
+					<!-- navigation -->
+					<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+                            <li><a title="team" href="#home">Home</a></li>
+							<li><a title="team" href="#about">About</a></li>
+							<li><a title="services" href="#services">Services</a></li>
+							<li><a title="works" href="#works">Works</a></li>
+							<li><a title="contact" href="#contact">Contact</a></li>
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Header area -->
+	<div id="header-wrapper" class="header-slider" >
+		<header class="clearfix">
+			<div class="logo">
+				<img src="img/s2plogo.png" alt="" >
+			</div>
+			<div class="container" id="home">
+				<div class="row">
+					<div class="span12">
+						<div id="main-flexslider" class="flexslider">
+							<ul class="slides">
+								<li>
+									<p class="home-slide-content">
+										<strong>creative</strong> and passion
+									</p>
+								</li>
+								<li>
+									<p class="home-slide-content">
+										 <strong>Placement</strong> Oriented
+									</p>
+								</li>
+								<li>
+									<p class="home-slide-content">
+                                        Learn to <strong> Grow</strong>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<!-- end slider -->
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- spacer section -->
+	<section class="spacer green">
+		<div class="container">
+			<div class="row">
+				<div class="span6 alignright flyLeft">
+					<blockquote class="large">
+						Your Placement Our Responsibility <cite>Gandhar Patwadhan, S2P Edutech</cite>
+					</blockquote>
+				</div>
+				<div class="span6 aligncenter flyRight">
+					<i class="icon-laptop icon-10x"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end spacer section -->
+	<!-- section: team -->
+	<section id="about" class="section">
+		<div class="container">
+			<h4>Who We Are</h4>
+			<div class="row">
+				<div class="span4 offset1">
+					<div>
+						<h2>Student To <strong>Professional</strong></h2>
+						<p>
+							We are a group of talented young blood coming together to bridge the gap between Education industry and Professional industry.
+
+S2P EDUTECH offers training programmes for students and groom them to match the skill sets required in the industry
+						</p>
+					</div>
+				</div>
+				<div class="span6">
+					<div class="aligncenter">
+						<img src="img/icons/creativity.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span2 offset1 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="img/team/img-1.jpg" alt="" />
+						<h3>Gandhar Patwardhan</h3>
+						<p>
+							Managing director
+						</p>
+					</div>
+				</div>
+				<div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="img/team/img-2.jpg" alt="" />
+						<h3>Sachin Nandgirwar</h3>
+						<p>
+							Administrative Director
+						</p>
+					</div>
+				</div>
+				<div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="img/team/img-3.jpg" alt="" />
+						<h3>Nishant Thakare</h3>
+						<p>
+							Aptitude Trainer
+						</p>
+					</div>
+				</div>
+				<div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="img/team/img-4.jpg" alt="" />
+						<h3>Faisal &nbsp;Amdani</h3>
+						<p>
+							Software Developer
+						</p>
+					</div>
+				</div>
+                <div class="span2 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="img/team/img-5.jpg" alt="" />
+						<h3>Pranati Paidipati</h3>
+						<p>
+							Software Developer
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- end section: team -->
+	<!-- section: services -->
+	<section id="services" class="section orange">
+		<div class="container">
+			<h4>Services</h4>
+			<!-- Four columns -->
+			<div class="row">
+				<div class="span3 animated-fast flyIn">
+					<div class="service-box">
+						<img src="img/web.png" alt="" / style="height: 165px;">
+						<h2>Web design</h2>
+						<!--<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						</p>-->
+					</div>
+				</div>
+				<div class="span3 animated flyIn">
+					<div class="service-box">
+						<img src="img/web5.png" alt="" / style="height: 165px;">
+						<h2>Web development</h2>
+						<!--<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						</p>-->
+					</div>
+				</div>
+				<div class="span3 animated-fast flyIn">
+					<div class="service-box">
+						<img src="img/mobile-website.png" style="height: 165px;" alt="" />
+						<h2>App Development</h2>
+						<!--<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						</p>-->
+					</div>
+				</div>
+				<div class="span3 animated-slow flyIn">
+					<div class="service-box">
+						<img src="img/training.png" style="height: 165px;" alt="" />
+						<h2>Training</h2>
+						<!--<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						</p>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end section: services -->
+	<!-- section: works -->
+	<section id="works" class="section">
+		<div class="container clearfix">
+			<h4>Our Works</h4>
+			<!-- portfolio filter -->
+			<div class="row">
+				<div id="filters" class="span12">
+					<ul class="clearfix">
+						<li>
+							<a href="#" data-filter="*" class="active">
+								<h5>All</h5>
+							</a>
+						</li>
+                        <li>
+							<a href="#" data-filter=".lang">
+								<h5>Programing Languages</h5>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-filter=".crt">
+								<h5>CRT</h5>
+							</a>
+						</li>
+						
+						<li>
+							<a href="#" data-filter=".web">
+								<h5>Web Development</h5>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-filter=".mobile">
+								<h5>Mobile Development</h5>
+							</a>
+						</li>
+                        <!--<li>
+							<a href="#" data-filter=".comp">
+								<h5>Competitive</h5>
+							</a>
+						</li>-->
+					</ul>
+				</div>
+				<!-- END PORTFOLIO FILTERING -->
+			</div>
+            
+             
+			<div class="row">
+				<div class="span12">
+					<div id="portfolio-wrap">
+						
+                        <!-- portfolio item -->
+						<div class="portfolio-item  grid mod crt">
+							<div class="portfolio">
+								<a onclick="openModal('crt')">
+                                <img src="img/crt%20(1).png"  alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>CRT </h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+                                </a>
+                            </div>
+						</div>
+						<!-- end portfolio item -->
+						<!-- portfolio item -->
+						<div class="portfolio-item grid mod crt">
+							<div class="portfolio">
+								<a onclick="openModal('tcrt')">
+						<img src="img/tcrt.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>TCRT</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						<!-- end portfolio item -->
+						<!-- portfolio item -->
+						<div class="portfolio-item grid mod crt ">
+							<div class="portfolio">
+								<a onclick="openModal('jots')">
+						<img src="img/jots.png" style="height: 234px;" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>JOTS</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						<!-- end portfolio item -->
+						<!-- portfolio item -->
+						<!--<div class="portfolio-item grid mod   lang">
+							<div class="portfolio">
+								<a onclick="openModal('c')">
+						<img src="img/icons/c.svg" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>C Progrming</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>-->
+						<!-- end portfolio item -->
+						<!-- portfolio item -->
+						<div class="portfolio-item grid mod lang ">
+							<div class="portfolio">
+								<a onclick="openModal('java')">
+						<img src="img/icons/java.svg" alt="" / >
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>Java</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						<!-- end portfolio item -->
+                        <!-- portfolio item -->
+						<div class="portfolio-item grid lang mod ">
+							<div class="portfolio">
+								<a onclick="openModal('jscript')">
+						<img src="img/icons/javascript.svg" alt="" / >
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5>JavaScript</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						<!-- end portfolio item -->
+                        <!-- portfolio item -->
+						<div class="portfolio-item grid web mod">
+							<div class="portfolio">
+								<a onclick="openModal('web')">
+						<img src="img/webdevelopment1.png" style="height: 234px;" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5> Web Development</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						<!-- end portfolio item -->
+						
+						
+                        <!-- portfolio item -->
+						<!--<div class="portfolio-item grid mod comp">
+							<div class="portfolio">
+								<a onclick="openModal('rail')">
+						<img src="img/373116-indian-railways-dna.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5> RRB</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						
+						<div class="portfolio-item grid mod comp">
+							<div class="portfolio">
+								<a onclick="openModal('ssc')">
+						<img src="img/ssc2.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5> SSC</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						
+						<div class="portfolio-item grid mod comp">
+							<div class="portfolio">
+								<a onclick="openModal('bank')">
+						<img src="img/SBI-logo.png" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5> Banking</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>-->
+						<!-- end portfolio item -->
+                        <!-- portfolio item -->
+						<div class="portfolio-item grid mod mobile">
+							<div class="portfolio">
+								<a onclick="openModal('ionic')">
+						<img src="img/icons/ionic.svg" alt="" />
+						<div class="portfolio-overlay">
+							<div class="thumb-info">
+								<h5> Ionic</h5>
+								<i class="icon-plus icon-2x"></i>
+							</div>
+						</div>
+						</a>
+							</div>
+						</div>
+						<!-- end portfolio item -->
+                       
+                        
+						
+					</div>
+				</div>
+			</div>
+		</div>
+        
+	</section>
+      
+
+    
+     
+	<!-- spacer section -->
+	<section class="spacer bg3">
+		<div class="container">
+			<div class="row">
+				<div class="span12 aligncenter flyLeft">
+					<blockquote style="color: black;" class="large">
+						We train with passion. <br>We code with fun.
+					</blockquote>
+				</div>
+				<div class="span12 aligncenter flyRight">
+					<i class="icon-plane icon-10x"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end spacer section -->
+    
+   <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <h5 class="modal-title" id="exampleModal">Modal title</h5>
+          
+        
+      </div>
+      <div class="modal-body">
+         
+          <!--<div style="position:relative;height:0;padding-bottom:50%" id="video">
+          <iframe src="https://www.youtube.com/embed/RQaVzbxZqXY?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+                          <div class="modal-body">
+                              <div id="video">
+                    <iframe id="cartoonVideo" width="560" height="315" src="//www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                               <div id="syllabus" style="padding: 10px;">
+          <ul>
+              <li>Gandhar Pathwardhan</li>
+              <li>Sachin Nandgirwar</li>
+              <li>Faisal Amdani</li>
+          </ul>
+          </div>
+                </div>
+          <!--<div style="position:relative;height:0;padding-bottom:56.21%" id="video">
+              
+          </div>
+          
+         
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="vid">Video</button>
+                  <button type="button" class="btn btn-primary" id="syl">Syllabus</button>
+
+      </div>
+    </div>
+  </div>
+</div>-->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h2>S2P EDUTECH</h2>
+                    <h4 class="modal-title" id="modaltitle" style="text-align: center"></h4>
+                </div>
+                <div class="modal-body">
+                    <!--<iframe id="cartoonVideo" width="560" height="315" src="//www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>-->
+                    <div id="videoContainer">
+                    </div>
+                    <div id="syllabus" style="padding: 50px;">
+                     <ul>
+                         <li>Gandhar Pathwardhan</li>
+                         <li>Sachin Nandgirwar</li>
+                         <li>Faisal Amdani</li>
+                     </ul>
+                </div>
+                    
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="vid">Video</button>
+                  <button type="button" class="btn btn-primary" id="syl">Syllabus</button>
+
+      </div>
+                 
+                
+            </div>
+        </div>
+    </div>
+<footer id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="span6 offset3">
+					<ul class="social-networks">
+						<li><a href="https://www.facebook.com/FromStudentToProfessional/"><i class="icon-circled icon-bgdark icon-facebook icon-2x"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/s2p-edutech"><i class="icon-circled icon-bgdark icon-linkedin icon-2x"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCG2s3-FDGCNho2ca2Ofe3oQ"><i class="icon-circled icon-bgdark icon-youtube icon-2x"></i></a></li>
+					</ul>
+					<p class="copyright">
+						<span class="credits">
+							<!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Maxim
+              -->
+							<a href="#">S2P Edutech</a>
+                            <p>Meera bhavan, app. Sony Center, Near Old Dande Hospital, Nagpur-440001.</p>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- ./container -->
+	</footer>	
+
+	<!-- end spacer section -->
+	<!-- section: contact -->
+	
+	
+	<a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+	
+     
+
+</body>
+
+</html>

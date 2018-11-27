@@ -1,0 +1,272 @@
+var mydata = {
+    
+    "crt":  {
+          "title":"CRT",
+        "url":"https://www.youtube.com/embed/SDc4ip5hNQo",
+        "syllabus":
+                    [
+                        {
+                            "topic":"ARITHMETIC",
+                            "subtopic":["Ratio and Proportion","Time & Work","Problems on Ages","Time and Distance","Percentages","Problems on Trains, Races, Boats & Streams","Profit & Loss","Averages and Mixtures","Partnership","Simple Interest & Compound Interest","Number system","Data Interpretation","GCD & LCM","Data Sufficiency","Mensuration","Permutation & Combinations","Probability"]
+                        },
+                        
+                       {
+                            "topic":"LOGICAL REASONING",
+                            "subtopic":["Number Series","Letter Series","Coding & Decoding","Cubes & Dices","Direction Sense","Seating Arrangement","Blood Relations","Time Sequencing & Ranking","Deductions","Logical Connectives","Analytical Puzzles","Non-Verbal","Binary Logic","Number Analysis","Alphanumeric"]
+                        },
+                        {
+                            "topic":"SOFT SKILLS",
+                            "subtopic":["Resume Writing","Group Discussions","Interview Skills","Mock Interviews"]
+                        }
+        
+                    ]
+        },
+    "tcrt":  {
+          "title":"TCRT",
+        "url":"https://www.youtube.com/embed/SDc4ip5hNQo",
+        "syllabus":
+                    [
+                        {
+                            "topic":"‘C’ LANGUAGE & DATA STRUCTURES",
+                            "subtopic":["C As Programming Language","Variable In C","Data Types In C","Operators In C","Input & Output In C","Functions In C","Arrays In C","Control Flow In  C","Pointers In C","File Manipulation In C","Structures In C","Pre-Processor In C","Stacks","Queue","Linked List","Trees","Searching & Sorting"]
+                        },
+                        
+                       {
+                            "topic":"DBMS",
+                            "subtopic":["Introduction","Relational Database","DDL, DML","SQL","Database Design","Transactions","Stored Procedures","Triggers","Joins","Normalization"]
+                        },
+                        {
+                            "topic":"Basics Of OS, Networking",
+                            "subtopic":[]
+                        },
+                        {
+                            "topic":"Object Oriented Programming",
+                            "subtopic":[]
+                        }
+        
+                    ]
+        },
+
+    "jots":  {
+          "title":"JOTS",
+        "url":"https://www.youtube.com/embed/3_1_irT5tSQ",
+        "syllabus":
+                    [
+                        
+                        {
+                            "topic":"ARITHMETIC",
+                            "subtopic":["Ratio and Proportion","Time & Work","Problems on Ages","Time and Distance","Percentages","Problems on Trains, Races, Boats & Streams","Profit & Loss","Averages and Mixtures","Partnership","Simple Interest & Compound Interest","Number system","Data Interpretation","GCD & LCM","Data Sufficiency","Mensuration","Permutation & Combinations","Probability"]
+                        },
+                        
+                       {
+                            "topic":"LOGICAL REASONING",
+                            "subtopic":["Number Series","Letter Series","Coding & Decoding","Cubes & Dices","Direction Sense","Seating Arrangement","Blood Relations","Time Sequencing & Ranking","Deductions","Logical Connectives","Analytical Puzzles","Non-Verbal","Binary Logic","Number Analysis","Alphanumeric"]
+                        },
+                        {
+                            "topic":"SOFT SKILLS",
+                            "subtopic":["Resume Writing","Group Discussions","Interview Skills","Mock Interviews"]
+                        },
+                        {
+                            "topic":"VERBAL ABILITY",
+                            "subtopic":["Spotting Errors","Sentence Improvement","Jumbled Sentences","Reading Comprehension","Tenses","Vocabulary"]
+                        },
+                        {
+                            "topic":"‘C’ LANGUAGE & DATA STRUCTURES",
+                            "subtopic":["C As Programming Language","Variable In C","Data Types In C","Operators In C","Input & Output In C","Functions In C","Arrays In C","Control Flow In  C","Pointers In C","File Manipulation In C","Structures In C","Pre-Processor In C","Stacks","Queue","Linked List","Trees","Searching & Sorting"]
+                        },
+                        
+                       {
+                            "topic":"DBMS",
+                            "subtopic":["Introduction","Relational Database","DDL, DML","SQL","Database Design","Transactions","Stored Procedures","Triggers","Joins","Normalization"]
+                        },
+                        
+                        {
+                            "topic":"JAVA (Core + Advanced)",
+                            "subtopic":["Introduction","Language Components","Object-Oriented Programming","Methods","Arrays","Encapsulation","Inheritance & Polymorphism","Abstract Classes and Interfaces","Exceptions","Input and Output in Java","Collections","JDBC","Multithreading","Jersey JAX-RS Library for REST Protocol"]
+                        },
+                         {
+                            "topic":"Web Technologies",
+                            "subtopic":["HTML","J Query","JAVA Script","JSON","AJAX","Call Back Functions","Promises","CSS"]
+                        }
+                        
+        
+        
+                    ]
+        },
+
+    "c":  {
+          "title":"C Language",
+        "url":"https://www.youtube.com/embed/cn0-cSUeBiw",
+        "syllabus":
+                    [
+                         {
+                            "topic":"‘C’ LANGUAGE & DATA STRUCTURES",
+                            "subtopic":["C As Programming Language","Variable In C","Data Types In C","Operators In C","Input & Output In C","Functions In C","Arrays In C","Control Flow In  C","Pointers In C","File Manipulation In C","Structures In C","Pre-Processor In C","Stacks","Queue","Linked List","Trees","Searching & Sorting"]
+                        }
+        
+                    ]
+        },
+        "java":{
+    
+            "title":"JAVA Language",
+        "url":"https://www.youtube.com/embed/ssUqtEaUTyQ",
+         "syllabus":
+                    [
+                        {
+                            "topic":"JAVA (Core + Advanced)",
+                            "subtopic":["Introduction","Language Components","Object-Oriented Programming","Methods","Arrays","Encapsulation","Inheritance & Polymorphism","Abstract Classes and Interfaces","Exceptions","Input and Output in Java","Collections","JDBC","Multithreading","Jersey JAX-RS Library for REST Protocol"]
+                        }
+        
+                    ]
+        },
+    "jscript":{
+    
+            "title":"JavaScript",
+        "url":"https://www.youtube.com/embed/ssUqtEaUTyQ",
+         "syllabus":
+                    [
+                        {
+                            "topic":"JAVA (Core + Advanced)",
+                            "subtopic":["Introduction","Language Components","Object-Oriented Programming","Methods","Arrays","Encapsulation","Inheritance & Polymorphism","Abstract Classes and Interfaces","Exceptions","Input and Output in Java","Collections","JDBC","Multithreading","Jersey JAX-RS Library for REST Protocol"]
+                        }
+        
+                    ]
+        },
+    "web":{
+    
+            "title":"Web Development",
+        "url":"https://www.youtube.com/embed/OCEQZ6Z5nWQ",
+         "syllabus":
+                    [
+                        {
+                            "topic":"Web Technologies",
+                            "subtopic":["HTML","J Query","JAVA Script","JSON","AJAX","Call Back Functions","Promises","CSS"]
+                        }
+        
+                    ]
+        },
+    
+        "ionic":{
+    
+            "title":"IONIC",
+        "url":"https://www.youtube.com/embed/lbpjVpOt1n0",
+         "syllabus":
+                    [
+                        {
+                            "topic":"Introduction & Set-up",
+                            "subtopic":["Introduction","Installing Ionic","Setup Environment"]
+                        },
+                        
+                       {
+                            "topic":"Getting Started",
+                            "subtopic":["Creating the ionic application","Serving the first application","Project Structure"]
+                        },
+                        {
+                            "topic":"Ionic Components",
+                            "subtopic":["Ionic lists items etc","Menus","Slides","Tabs","Cards","Icons","Form elements e.g. Buttons, Checkbox, Inputs etc.","Grids","Other utilities"]
+                        },
+                         {
+                            "topic":"Navigation",
+                            "subtopic":["Basic Navigation","Navigating from the Root component","Navigating from an Overlay Component","Pushing a View","Removing a view"]
+                        },
+                         {
+                            "topic":"Theming",
+                            "subtopic":["Introduction","SASS"]
+                        },
+                         {
+                            "topic":"Loaders, Modals and Popovers",
+                            "subtopic":["Loading","Modals","Popovers","Alerts","Toasts"]
+                        },
+                         {
+                            "topic":"Gestures Events",
+                            "subtopic":["Gestures","Events"]
+                        },
+                        {
+                            "topic":"Storage",
+                            "subtopic":["Ionic Storage","Ionic SQLite Storage"]
+                        },
+                        {
+                            "topic":"Ionic Native",
+                            "subtopic":["Device Information","Camera","Http","In App Browser","Android permissions","FlashLight and etc."]
+                        },
+                        {
+                            "topic":"Deployment",
+                            "subtopic":["Cli and Ionic lab overview","Creating build for Android & IOS","Running and emulating the application"]
+                        }
+        
+        
+                    ]
+        },
+        
+    
+     "rail":{
+    
+            "title":"RRB",
+        "url":"https://www.youtube.com/embed/lbpjVpOt1n0",
+         "syllabus":
+                    [
+                        {
+                            "topic":"intro",
+                            "subtopic":["a","b","c"]
+                        },
+                        
+                       {
+                            "topic":"chap1",
+                            "subtopic":["a","b","c"]
+                        },
+                        {
+                            "topic":"chap2",
+                            "subtopic":["a","b","c"]
+                        }
+        
+                    ]
+        },
+     "ssc":{
+    
+            "title":"SSC",
+        "url":"https://www.youtube.com/embed/lbpjVpOt1n0",
+         "syllabus":
+                    [
+                        {
+                            "topic":"intro",
+                            "subtopic":["a","b","c"]
+                        },
+                        
+                       {
+                            "topic":"chap1",
+                            "subtopic":["a","b","c"]
+                        },
+                        {
+                            "topic":"chap2",
+                            "subtopic":["a","b","c"]
+                        }
+        
+                    ]
+        },
+     "bank":{
+    
+            "title":"BANKING",
+        "url":"https://www.youtube.com/embed/lbpjVpOt1n0",
+         "syllabus":
+                    [
+                        {
+                            "topic":"intro",
+                            "subtopic":["a","b","c"]
+                        },
+                        
+                       {
+                            "topic":"chap1",
+                            "subtopic":["a","b","c"]
+                        },
+                        {
+                            "topic":"chap2",
+                            "subtopic":["a","b","c"]
+                        }
+        
+                    ]
+        }
+        
+        
+        
+    
+}
